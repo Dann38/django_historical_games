@@ -20,5 +20,7 @@ import mainapp.views
 
 urlpatterns = [
     path('', mainapp.views.index),
+    path('gallery/', mainapp.views.gallery),
+    path('contacts/', mainapp.views.contacts),
     path('admin/', admin.site.urls),
 ]
