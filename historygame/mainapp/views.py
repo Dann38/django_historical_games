@@ -2,13 +2,21 @@ from django.shortcuts import render
 
 
 def index(request):
-   return render(request, 'mainapp/index.html')
+    content = {
+        'title': 'main',
+    }
+    return render(request, 'mainapp/index.html', content)
 
 
 def contacts(request):
-   return render(request, 'mainapp/contacts.html')
+    content = {
+        'title': 'contacts',
+    }
+    return render(request, 'mainapp/contacts.html', content)
 
 
 def gallery(request):
-   return render(request, 'mainapp/gallery.html')
-
+    content = {
+        'title': 'gallery',
+    }
+    return render(request, 'mainapp/gallery.html', content)
