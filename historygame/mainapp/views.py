@@ -20,3 +20,10 @@ def gallery(request):
         'title': 'gallery',
     }
     return render(request, 'mainapp/gallery.html', content)
+
+
+def product(request):
+    content = {
+        'title': 'product',
+    }
+    return render(request, 'mainapp/page_product.html', content)
