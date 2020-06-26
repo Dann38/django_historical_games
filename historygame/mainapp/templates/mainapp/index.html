@@ -107,43 +107,7 @@ perferendis doloribus asperiores repellat.</p>
        </div>
    </div>
    <div class="block bgw">
-       <div class="center center1"><h2 class="h2">Our Gallery</h2>
-       <div class="div4">
-               <div class="div4-block">
-                  <a href="page_product.html" class="a_div4_block">
-                   <div class="div4-block_img" style="background: url('/static/img/p1.jpeg') no-repeat top center;"></div></a>
-                   <p class="name_game_product">
-                       ASSASIN'S CREAD: Rogue
-                   </p>
-                   <a href="{% url 'main:product' %}" class="button_red">Buy</a>
-               </div>
-           <div class="div4-block">
-              <a href="page_product.html" class="a_div4_block">
-                  <div class="div4-block_img" style="background: url('/static/img/p2.jpeg') no-repeat top center;"></div></a>
-               <p class="name_game_product">
-                   Tomb Raider
-               </p>
-               <a href="#" class="button_red">Buy</a>
-           </div>
-           <div class="div4-block">
-              <a href="page_product.html" class="a_div4_block">
-                  <div class="div4-block_img" style="background: url('/static/img/p3.jpeg') no-repeat top center;"></div></a>
-               <p class="name_game_product">
-                   Ryse: Son Of Rome
-               </p>
-               <a href="#" class="button_red">Buy</a>
-           </div>
-           <div class="div4-block">
-              <a href="page_product.html" class="a_div4_block">
-                  <div class="div4-block_img" style="background: url('/static/img/p4.jpeg') no-repeat top center;"></div></a>
-               <p class="name_game_product">
-                   World Of Warcraft:
-Wrath Of The Linch King
-               </p>
-               <a href="#" class="button_red">Buy</a>
-           </div>
-       </div>
-       </div>
+       {% include 'mainapp/includes/inc__our_gallery.html' %}
    </div>
    <div class="block bgimg bgimg2">
       <div class="img_bgimg1" style="background: url('/static/img/3.png') no-repeat center center;"></div>
@@ -164,7 +128,6 @@ consectetur a mollis ac, cursus eu ipsum.
        </div>
    </div>
    <div class="block bgw">
-
        <div class="center center1"><h2 class="h2">News & Events</h2>
        <div class="div2">
            <div class="div2-1">
