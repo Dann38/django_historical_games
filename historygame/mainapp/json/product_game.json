@@ -1,0 +1,30 @@
+[
+  {
+    "category":"Shooter",
+    "name":"ASSASSIN'S CREED ROGUE",
+    "description":"",
+    "price": 999.89,
+    "image":"games_images/p1.jpeg"
+  },
+  {
+    "category":"Shooter",
+    "name":"TOMB RAIDER",
+    "description":"",
+    "price": 2199.89,
+    "image":"games_images/p2.jpeg"
+  },
+  {
+    "category":"Adventure",
+    "name":"RYSE SON OF ROME",
+    "description":"",
+    "price": 499.89,
+    "image":"games_images/p3.jpeg"
+  },
+  {
+    "category":"Strategy",
+    "name":"WORLD WARCRAFT WRATH OF THE LICH KING",
+    "description":"",
+    "price": 299.89,
+    "image":"games_images/p4.jpeg"
+  }
+]

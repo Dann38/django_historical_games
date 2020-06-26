@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+    <title>
+        {% block title %}
+            Main
+        {% endblock %}
+    </title>
+</head>
+<body>
+   <div class="container">
+       <main class="main">
+           {% block content %}
+           {% endblock %}
+       </main>
+   </div>
+</body>
+</html>

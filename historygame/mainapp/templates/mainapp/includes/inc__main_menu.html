@@ -1,13 +1,22 @@
 <div class="header_block nav_m nav_m_w">
 <nav class="nav center">
        <ul class="main-menu">
-                  <li class="li-main-menu"><a href="/" class="a-main-menu">Home</a></li>
-                  <li class="li-main-menu"><a href="#" class="a-main-menu">About</a></li>
-                  <li class="li-main-menu"><a href="#" class="a-main-menu">Services</a></li>
-                  <li class="li-main-menu"><a href="/gallery/" class="a-main-menu">Gallery</a></li>
-                  <li class="li-main-menu"><a href="#" class="a-main-menu">News</a></li>
-                  <li class="li-main-menu"><a href="#" class="a-main-menu">Team</a></li>
-                  <li class="li-main-menu"><a href="/contacts/" class="a-main-menu">Contact Us</a></li>
-        </ul>
+          <li class="li-main-menu"><a href="/" class="a-main-menu">Home</a></li>
+          <li class="li-main-menu"><a href="#" class="a-main-menu">About</a></li>
+          <li class="li-main-menu"><a href="#" class="a-main-menu">Services</a></li>
+          <li class="li-main-menu"><a href="/gallery/" class="a-main-menu">Gallery</a></li>
+          <li class="li-main-menu"><a href="#" class="a-main-menu">News</a></li>
+          <li class="li-main-menu"><a href="#" class="a-main-menu">Team</a></li>
+          <li class="li-main-menu"><a href="/contacts/" class="a-main-menu">Contact Us</a></li>
+            {% if user.is_authenticated%}
+                <li class="li-main-menu"><a href="#" class="a-main-menu">
+                    {{ user.first_name|default:'user'|title }}
+                </a></li>
+                <li class="li-main-menu"><a href="{% url 'authapp:logout' %}" class="a-main-menu">Logout</a></li>
+            {% else %}
+                <li class="li-main-menu"><a href="{% url 'authapp:login' %}" class="a-main-menu">Login</a></li>
+            {% endif %}
+
+       </ul>
 </nav>
 </div>

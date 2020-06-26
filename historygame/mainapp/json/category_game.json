@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Strategy",
+    "description": "A strategy game or strategic game is a game (e.g. a board game) in which the players' uncoerced, and often autonomous decision-making skills have a high significance in determining the outcome. Almost all strategy games require internal decision tree style thinking, and typically very high situational awareness."
+  },
+  {
+    "name": "Shooter",
+    "description": "Shooter games are a subgenre of action video game, which often test the player's spatial awareness, reflexes, and speed in both isolated single player or networked multiplayer environments. Shooter games encompass many subgenres that have the commonality of focusing on the actions of the avatar engaging in combat with a weapon against both code-driven NPC enemies or other avatars controlled by other players."
+  },
+  {
+    "name": "Adventure",
+    "description": "An adventure game is a video game in which the player assumes the role of a protagonist in an interactive story driven by exploration and puzzle-solving.[1] The genre's focus on story allows it to draw heavily from other narrative-based media, literature and film, encompassing a wide variety of literary genres."
+  }
+]

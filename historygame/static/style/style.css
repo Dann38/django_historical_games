@@ -690,7 +690,21 @@ nav > .main-menu > li > a{
     font-family: Poppins-Medium;
     font-size: 16px;
 }
+/*СТРАНИЦА ВХОДА*/
+.div_login_form{
+    display: flex;
+    justify-content: center;
+}
+.login_form{
+    width:400px;
+}
 
+.form-control{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 /*СТРАНИЦА ТОВАРА*/
 .mark_game_product{
     text-transform: uppercase;
