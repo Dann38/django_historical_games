@@ -8,17 +8,14 @@
 {% block content %}
     <div class="block block_empty"></div>
     <div class="block bgg">
-       <div class="center center1 "><h2 class="h2">Login</h2>
+       <div class="center center1 "><h2 class="h2">Registration</h2>
            <div class="div_login_form">
-               <form class="login_form" method="POST">
+               <form class="login_form" method="POST" enctype="multipart/form-data">
                    {% csrf_token %}
                    {{ form.as_p }}
-                   <input class="button_red" type="submit" value="Login">
+                   <input class="button_red" type="submit" value="Register">
                 </form>
            </div>
-           <a href="{% url 'auth:register' %}" class="button_red">
-registration
-           </a>
        </div>
    </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from authapp.forms import GameUserLoginForm
+from authapp.forms import GameUserLoginForm, GameUserRegisterForm
 from django.contrib import auth
 from django.urls import reverse
 
@@ -27,3 +27,19 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('main:main'))
+
+
+def register(request):
+    if request.method == 'POST':
+        form = GameUserRegisterForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('main:main'))
+    else:
+        form = GameUserRegisterForm()
+    content = {
+        'title': 'registration',
+        'form': form,
+    }
+    return render(request, 'authapp/register.html', content)
