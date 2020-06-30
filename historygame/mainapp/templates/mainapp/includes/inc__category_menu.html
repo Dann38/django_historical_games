@@ -1,7 +1,10 @@
 <nav class=" center">
        <ul class="main-menu">
+                <li class="h3"><a href="{% url 'main:gallery' %}" >All</a></li>
            {% for category in categories %}
-                  <li class="h3"><a href="#" >{{ category.name }}</a></li>
+                  <li class="h3 {% if request.resolver_match.kwargs.pk|add:0 == category.pk %}active{% endif %}">
+                      <a href="{% url 'main:gallery_category'  category.pk %}" >{{ category.name }}</a>
+                  </li>
            {% endfor %}
        </ul>
 </nav>

@@ -9,7 +9,7 @@
           <li class="li-main-menu"><a href="#" class="a-main-menu">Team</a></li>
           <li class="li-main-menu"><a href="/contacts/" class="a-main-menu">Contact Us</a></li>
             {% if user.is_authenticated%}
-                <li class="li-main-menu"><a href="#" class="a-main-menu">
+                <li class="li-main-menu"><a href="{% url 'auth:update' %}" class="a-main-menu">
                     {{ user.first_name|default:'user'|title }}
                 </a></li>
                 <li class="li-main-menu"><a href="{% url 'authapp:logout' %}" class="a-main-menu">Logout</a></li>

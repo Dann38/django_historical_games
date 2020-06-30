@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from authapp.forms import GameUserLoginForm, GameUserRegisterForm
+from authapp.forms import GameUserLoginForm, GameUserRegisterForm, GameUserUpdateForm
 from django.contrib import auth
 from django.urls import reverse
 
@@ -43,3 +43,21 @@ def register(request):
         'form': form,
     }
     return render(request, 'authapp/register.html', content)
+
+
+
+def update(request):
+    if request.method == 'POST':
+        form = GameUserUpdateForm(request.POST, request.FILES, instance=request.user)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('auth:update'))
+    else:
+        form = GameUserUpdateForm(instance=request.user)
+    content = {
+        'title': 'update',
+        'form': form,
+    }
+    return render(request, 'authapp/update.html', content)
+

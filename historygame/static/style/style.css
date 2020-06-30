@@ -749,6 +749,11 @@ nav > .main-menu > li > a{
     margin-top: 100px;
 }
 
+.active{
+    text_decoration:underline;
+    color:#F44336 !important;
+}
+
 @media (max-width: 960px) {
 .div2_max{
     display: block;

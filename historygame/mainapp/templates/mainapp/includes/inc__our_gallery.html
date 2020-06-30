@@ -7,7 +7,7 @@
                    <p class="name_game_product">
                        {{ product.name }}
                    </p>
-                   <a href="{% url 'main:product' %}" class="button_red">Buy</a>
+                   <a href="{% url 'basket:basket_add' product.pk %}" class="button_red">Buy</a>
                </div>
            {% endfor %}
        </div>
