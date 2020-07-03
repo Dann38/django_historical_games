@@ -1,0 +1,44 @@
+{% extends 'basketapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="block block_empty"></div>
+    <div class="block bgg">
+       <div class="center center1 "><h2 class="h2">Basket</h2>
+            {% for item in basket %}
+                <h3 class="h4_black">{{ item.product.name }}</h3>
+                <div class="div4">
+
+                    <img src="/media/{{ item.product.image }}" width="100" alt="not image">
+
+                    <div class="span_basket">
+                        <p class="p2">price</p>
+                        {{ item.product.price }}
+                    </div>
+                    <div class="span_basket">
+                        <p class="p2">quantity</p>
+                        <input type="number" value="{{ item.quantity }}" >
+                    </div>
+                    <div class="span_basket">
+                        <p class="p2">total price</p>
+                        {{ item.product_cost }}  ₽
+                    </div>
+                    <div>
+                        <a href="{% url 'basket:basket_delete' item.pk %}" class="button_red">delete</a>
+<!--                        <a href="{#% url '' %#}" class="button_red">pay</a>-->
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+           <div class="span_basket">
+               <p class="p2">purchase amount:</p>
+               {{ user.purchase_amount }}  ₽
+           </div>
+           <a href="{% url 'main:main' %}" class="button_red">main</a>
+       </div>
+   </div>
+{% endblock %}

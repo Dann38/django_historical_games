@@ -10,3 +10,8 @@ class Basket(models.Model):
     user = models.ForeignKey(GameUser, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='quantity', default=0)
     add_datetime = models.DateTimeField(verbose_name='date_add', auto_now_add=True)
+
+    @property
+    def product_cost(self):
+        return self.product.price * self.quantity
+

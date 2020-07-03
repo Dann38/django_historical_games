@@ -693,12 +693,15 @@ nav > .main-menu > li > a{
 /*СТРАНИЦА ВХОДА*/
 .div_login_form{
     display: flex;
-    justify-content: center;
+    flex-direction:column;
 }
 .login_form{
     width:400px;
 }
 
+btn_input{
+    height: 35px;
+}
 .form-control{
     width: 100%;
     padding: 12px 20px;
@@ -719,8 +722,8 @@ nav > .main-menu > li > a{
 }
 
 .product_page_block_img_big_img{
-    width: 471px;
-    height: 259px;
+    height: 100%;
+    width: auto;
 }
 
 .product_page_block_img_imgs{
@@ -754,6 +757,15 @@ nav > .main-menu > li > a{
     color:#F44336 !important;
 }
 
+/* Карзина */
+.span_basket{
+
+
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 960px) {
 .div2_max{
     display: block;

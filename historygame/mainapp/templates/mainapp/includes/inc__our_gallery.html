@@ -2,7 +2,7 @@
        <div class="div4">
            {% for product in products %}
                 <div class="div4-block">
-                  <a href="{% url 'main:product' %}" class="a_div4_block">
+                  <a href="{% url 'main:product' product.pk %}" class="a_div4_block">
                    <div class="div4-block_img" style="background: url('/media/{{ product.image }}') no-repeat top center;"></div></a>
                    <p class="name_game_product">
                        {{ product.name }}

@@ -2,28 +2,28 @@
   {
     "category":"Shooter",
     "name":"ASSASSIN'S CREED ROGUE",
-    "description":"",
+    "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     "price": 999.89,
     "image":"games_images/p1.jpeg"
   },
   {
     "category":"Shooter",
     "name":"TOMB RAIDER",
-    "description":"",
+    "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     "price": 2199.89,
     "image":"games_images/p2.jpeg"
   },
   {
     "category":"Adventure",
     "name":"RYSE SON OF ROME",
-    "description":"",
+    "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     "price": 499.89,
     "image":"games_images/p3.jpeg"
   },
   {
     "category":"Strategy",
     "name":"WORLD WARCRAFT WRATH OF THE LICH KING",
-    "description":"",
+    "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
     "price": 299.89,
     "image":"games_images/p4.jpeg"
   }

@@ -11,24 +11,24 @@
                <div class="center center3">
                    <div class="div2 div2_product">
                        <div class="div2-1 product_page_block_img">
-                           <img class="product_page_block_img_big_img" src="{% static 'img/p_big_img.jpeg' %}" alt="max_img">
+                           <img class="product_page_block_img_big_img" src="/media/{{ product.image }}" alt="max_img" width="100%">
                            <div class="product_page_block_img_imgs">
 
 
-                              <img class="product_page_block_img_min_img" src="{% static 'img/p_min_img1.jpeg' %}" alt="min_img">
-                              <img class="product_page_block_img_min_img" src="{% static 'img/p_min_img2.jpeg' %}" alt="min_img">
-                              <img class="product_page_block_img_min_img" src="{% static 'img/p_min_img3.jpeg' %}" alt="min_img">
-                              <img class="product_page_block_img_min_img" src="{% static 'img/p_min_img4.jpeg' %}" alt="min_img">
+                              <img class="product_page_block_img_min_img" src="/media/{{ product.image }}" alt="min_img">
+                              <img class="product_page_block_img_min_img" src="/media/{{ product.image }}" alt="min_img">
+                              <img class="product_page_block_img_min_img" src="/media/{{ product.image }}" alt="min_img">
+                              <img class="product_page_block_img_min_img" src="/media/{{ product.image }}" alt="min_img">
                            </div>
                        </div>
                        <div class="div2-2 product_page_info" style="width: 471px; height: 416px">
-                           <h2 class="compact_h2 h2_black">Assasin’s Creed: </h2><div class="h2">Rogue</div>
+                           <h2 class="compact_h2 h2_black">{{ product.name }}</h2><div class="h2">Rogue</div>
 
                       <div class="price">
-                          <span class="new_price">$29.99</span>
+                          <span class="new_price">{{ product.price }} ₽</span>
                       </div>
-                      <a href="#" class="button_red button_max">Buy</a>
-                      <p class="p">The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The story is set in the mid-18th century during the Seven Years' War, and follows Shay Patrick Cormac, an Assassin-turned-Templar who hunts down former members of his Brotherhood after being betrayed by them. Gameplay in Rogue is very similar to that of Black Flag with a mixture of ship-based naval exploration and third-person land-based exploration with some new features.</p>
+                      <a href="{% url 'basket:basket_add' product.pk%}" class="button_red button_max">Buy</a>
+                      <p class="p">{{ product.description }}</p>
                        </div>
                    </div>
                </div>
