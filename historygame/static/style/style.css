@@ -284,7 +284,13 @@ nav > .main-menu > li > a{
     margin-bottom: 20px;
     text-align: left;
 }
-
+.h4_red{
+    color: #F44336;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
 
 /*БЛОКИ С РИСУНКАМИ*/
 
@@ -765,6 +771,9 @@ btn_input{
   flex-direction:column;
   align-items: center;
   justify-content: center;
+}
+.no_active_user{
+    opacity: 0.5;
 }
 @media (max-width: 960px) {
 .div2_max{

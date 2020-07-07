@@ -14,5 +14,5 @@ urlpatterns = [
     path('gallery/<int:pk>/category', mainapp.views.gallery_category, name='gallery_category'),
 
     path('contacts/', mainapp.views.contacts, name='contacts'),
-    re_path(r'product/(?P<pk>\d+)/', mainapp.views.product, name='product'),
+    re_path(r'product/(?P<pk>\d+)/$', mainapp.views.product, name='product'),
 ]

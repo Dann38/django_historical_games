@@ -1,0 +1,22 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="block block_empty"></div>
+    <div class="block bgg">
+       <div class="center center1 "><h2 class="h2">User Editing</h2>
+           <div class="div_login_form">
+               <form class="login_form" method="POST" enctype="multipart/form-data">
+                   {% csrf_token %}
+                   {{ form.as_p }}
+                   <input class="button_red" type="submit" value="Update">
+                </form>
+           </div>
+           <a href="{% url 'my_admin:index' %}" class="button_red">main</a>
+       </div>
+   </div>
+{% endblock %}

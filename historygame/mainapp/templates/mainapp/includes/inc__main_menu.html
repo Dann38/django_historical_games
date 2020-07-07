@@ -21,6 +21,9 @@
             {% else %}
                 <li class="li-main-menu"><a href="{% url 'authapp:login' %}" class="a-main-menu">Login</a></li>
             {% endif %}
+           {% if user.is_superuser %}
+                <li class="li-main-menu"><a href="{% url 'adminapp:index' %}" class="a-main-menu">Admin</a></li>
+           {% endif%}
        </ul>
 </nav>
 </div>

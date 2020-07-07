@@ -13,5 +13,8 @@ class Basket(models.Model):
 
     @property
     def product_cost(self):
-        return self.product.price * self.quantity
+        return round(float(self.product.price) * int(self.quantity))
 
+    @property
+    def product_pk(self):
+        return self.product.pk

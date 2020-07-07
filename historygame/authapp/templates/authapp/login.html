@@ -12,6 +12,9 @@
            <div class="c">
                <form class="login_form" method="POST">
                    {% csrf_token %}
+                   {% if next %}
+                   <input type="hidden" name="next" value="{{ next }}">
+                   {% endif %}
                    {{ form.as_p }}
                    <input class="btn_input button_red" type="submit" value="Login">
                 </form>

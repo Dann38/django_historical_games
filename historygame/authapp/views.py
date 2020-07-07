@@ -5,6 +5,7 @@ from django.urls import reverse
 
 
 def login(request):
+    next = request.GET.get('next', '')
     if request.method == 'POST':
         form = GameUserLoginForm(data=request.POST)
 
@@ -14,12 +15,15 @@ def login(request):
             user = auth.authenticate(username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
+                if 'next' in request.POST:
+                    return HttpResponseRedirect(request.POST['next'])
                 return HttpResponseRedirect(reverse('main:main'))
     else:
         form = GameUserLoginForm()
     content = {
         'title': 'Login',
         'form': form,
+        'next': next,
     }
     return render(request, 'authapp/login.html', content)
 
@@ -43,7 +47,6 @@ def register(request):
         'form': form,
     }
     return render(request, 'authapp/register.html', content)
-
 
 
 def update(request):

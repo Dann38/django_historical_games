@@ -8,8 +8,9 @@
 {% block content %}
     <div class="block block_empty"></div>
     <div class="block bgg">
-       <div class="center center1 "><h2 class="h2">Basket</h2>
+       <div class="center center1 basket_list"><h2 class="h2">Basket</h2>
             {% for item in basket %}
+           <div class="item_{{ item.pk }}">
                 <h3 class="h4_black">{{ item.product.name }}</h3>
                 <div class="div4">
 
@@ -21,11 +22,14 @@
                     </div>
                     <div class="span_basket">
                         <p class="p2">quantity</p>
-                        <input type="number" value="{{ item.quantity }}" >
+                        <input name="{{ item.pk }}" class="basket_quantity" type="number"
+                               min=0 value="{{ item.quantity }}" >
                     </div>
                     <div class="span_basket">
                         <p class="p2">total price</p>
-                        {{ item.product_cost }}  ₽
+                        <span class="product_cost_pk_{{ item.pk }}">
+                            {{ item.product_cost }}  ₽
+                        </span>
                     </div>
                     <div>
                         <a href="{% url 'basket:basket_delete' item.pk %}" class="button_red">delete</a>
@@ -33,10 +37,13 @@
                     </div>
                 </div>
                 <hr>
+           </div>
             {% endfor %}
            <div class="span_basket">
                <p class="p2">purchase amount:</p>
-               {{ user.purchase_amount }}  ₽
+               <span class="purchase_amount">
+                   {{ user.purchase_amount }}  ₽
+               </span>
            </div>
            <a href="{% url 'main:main' %}" class="button_red">main</a>
        </div>

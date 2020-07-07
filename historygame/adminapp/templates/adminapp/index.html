@@ -1,0 +1,58 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="block block_empty"></div>
+
+    <div class="block bgg">
+       <div class="center center1 "><h2 class="h2">Admin ({{ user.username }})</h2>
+           {% include 'adminapp/includes/inc__category_menu.html' %}
+
+
+           {% for item in list_user %}
+           <div class="item_{{ item.pk }} {% if not item.is_active %}no_active_user{% endif %}">
+                <h3 class="{% if item.is_superuser %}h4_red{% else %}h4_black{% endif %}">
+                    {{ item.username }}{% if item.is_superuser %}(admin){% endif %}
+                </h3>
+                <div class="div4">
+
+                    <img src="/media/{{ item.avatar }}" width="100" alt="not image">
+
+                    <div class="span_basket">
+                        <p class="p2">info</p>
+                        <p>age: {{ item.age }}</p>
+                        <p>name: {{ item.first_name }} {{ item.last_name }}</p>
+                    </div>
+                    <div class="span_basket">
+                        <p class="p2">logged</p>
+                        {{ item.last_login }}
+                    </div>
+                    <div class="span_basket">
+                        <p class="p2">email</p>
+                        <span>
+                            {{ item.email }}
+                        </span>
+                    </div>
+                    <div>
+                        {% if item.is_active %}
+                            <a href="{% url 'my_admin:delete_user' item.pk %}" class="button_red">delete</a>
+                            <a href="{% url 'my_admin:update_user' item.pk %}" class="button_red">update</a>
+                        {% else %}
+                            <a href="{% url 'my_admin:restore_user' item.pk %}" class="button_red">restore</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr>
+           </div>
+            {% endfor %}
+
+
+
+
+       </div>
+    </div>
+{% endblock %}
