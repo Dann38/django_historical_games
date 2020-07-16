@@ -13,7 +13,7 @@
            {% include 'adminapp/includes/inc__category_menu.html' %}
 
 
-           {% for item in list_user %}
+           {% for item in object_list %}
            <div class="item_{{ item.pk }} {% if not item.is_active %}no_active{% endif %}">
                 <h3 class="{% if item.is_superuser %}h4_red{% else %}h4_black{% endif %}">
                     {{ item.username }}{% if item.is_superuser %}(admin){% endif %}

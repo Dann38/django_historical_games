@@ -28,7 +28,7 @@ def index(request):
     context = {
        'basket': basket,
     }
-    return render(request, 'basketapp/index.html', context=context)
+    return render(request, 'basketapp/gameuser_list.html', context=context)
 
 
 @login_required

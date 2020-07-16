@@ -772,8 +772,11 @@ btn_input{
   align-items: center;
   justify-content: center;
 }
-.no_active_user{
+.no_active{
     opacity: 0.5;
+}
+.no_display{
+    display: none;
 }
 @media (max-width: 960px) {
 .div2_max{

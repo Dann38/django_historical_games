@@ -1,0 +1,46 @@
+{% extends 'adminapp/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="block block_empty"></div>
+
+    <div class="block bgg">
+       <div class="center center1 "><h2 class="h2">Admin ({{ user.username }})</h2>
+           {% include 'adminapp/includes/inc__category_menu.html' %}
+
+
+           {% for item in list_category %}
+           <div class="item_{{ item.pk }} {% if not item.is_active %}no_active{% endif %}">
+                <h3 class="h4_black">
+                    {{ item.name }}
+                </h3>
+                <div class="div4">
+                    <img src="/media/{{ item.image }}" width="100" alt="not image">
+                    <div class="span_admin about_us">
+                        <p class="p">price</p>
+                        <p>{{ item.price }}</p>
+                    </div>
+                    <div class="span_admin about_us">
+                        <p class="p">info</p>
+                        <p>{{ item.description }}</p>
+                    </div>
+                    <div>
+                        <a href="{% url 'my_admin:product_delete' item.pk %}" class="button_red pr_del btn_from_{{ item.pk }} {% if not item.is_active %}no_display{% endif %}">delete</a>
+                        <a href="{% url 'my_admin:product_update' item.pk %}" class="button_red btn_from_{{ item.pk }} {% if not item.is_active %}no_display{% endif %}">update</a>
+                        <a href="{% url 'my_admin:product_restore' item.pk %}" class="button_red btn_restore btn_to_{{ item.pk }} {% if item.is_active %}no_display{% endif %}">restore</a>
+                    </div>
+                </div>
+                <hr>
+           </div>
+            {% endfor %}
+
+
+
+
+       </div>
+    </div>
+{% endblock %}

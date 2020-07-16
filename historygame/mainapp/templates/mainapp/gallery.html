@@ -13,6 +13,23 @@
 
     <div class="block bgw">
        {% include 'mainapp/includes/inc__our_gallery.html' %}
+        <div class="pagination center center1">
+            <span class="step-links h4">
+                {% if products.has_previous %}
+                    <a href="{% url 'main:gallery' category.pk 1 %}">first </a>
+                    <a href="{% url 'main:gallery' category.pk products.previous_page_number %}">&#9668;</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ products.number }} / {{ products.paginator.num_pages }}.
+                </span>
+
+                {% if products.has_next %}
+                    <a href="{% url 'main:gallery' category.pk products.next_page_number %}">&#9658;</a>
+                    <a href="{% url 'main:gallery' category.pk products.paginator.num_pages %}"> last</a>
+                {% endif %}
+            </span>
+        </div>
    </div>
     <div class="block max_block">
        <div class="div2_max">

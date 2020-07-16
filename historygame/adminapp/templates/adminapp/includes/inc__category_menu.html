@@ -1,6 +1,14 @@
 <nav class=" center">
        <ul class="main-menu">
                 <li class="h3"><a href="{% url 'main:main' %}" >main</a></li>
-                <li class="h3"><a href="{% url 'my_admin:create_user' %}" >create_user</a></li>
+                <li class="h3"><a href="{% url 'my_admin:create_user' %}" >create user</a></li>
+                <li class="h3"><a href="{% url 'my_admin:category_create' %}" >create category</a></li>
+                <li class="h3"><a href="{% url 'my_admin:product_create' %}" >create product</a></li>
+                <li class="h3"><a href="{% url 'my_admin:category_product' %}" >
+                    category_product
+                    {% if category %}
+                        ({{ category }})
+                    {% endif %}
+                </a></li>
        </ul>
 </nav>

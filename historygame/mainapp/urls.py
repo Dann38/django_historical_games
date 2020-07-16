@@ -9,9 +9,10 @@ app_name = 'mainapp'
 urlpatterns = [
     path('', mainapp.views.index, name='main'),
     path('gallery/', mainapp.views.gallery, name='gallery'),
+    # path('gallery/<int:page>/', mainapp.views.gallery, name='gallery'),
 
-    re_path(r'gallery/(?P<pk>\d+)/category', mainapp.views.gallery_category, name='gallery_category'),
-    path('gallery/<int:pk>/category', mainapp.views.gallery_category, name='gallery_category'),
+    path('gallery/<int:pk>/category/', mainapp.views.gallery, name='gallery'),
+    path('gallery/<int:pk>/category/<int:page>/', mainapp.views.gallery, name='gallery'),
 
     path('contacts/', mainapp.views.contacts, name='contacts'),
     re_path(r'product/(?P<pk>\d+)/$', mainapp.views.product, name='product'),
